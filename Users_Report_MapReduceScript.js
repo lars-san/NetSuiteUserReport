@@ -324,7 +324,7 @@ log.debug('reduce(): fieldLookUp', fieldLookUp);
 		let scriptRecord = runtime.getCurrentScript();											// This must be declared again in order for us to grab a parameter from the deployment.
 		let directoryId = scriptRecord.getParameter({name:'custscript_taco_user_report_dir_id'});	// Get the Internal ID of the chosen directory from the deployment.
 		let contents = 'Internal ID,Name,User Name,License Type,Last Log-in Date,Days Since Logged In,Notes\n';						// The header for the csv file is this first line.
-		let fileName = todaysDate() + '-StaleUserReport.csv';										// The filename will be something like 2020-12-31-unbilledData.csv. This uses another function to get the date in a more readable format.
+		let fileName = todaysDate() + '-UsersReport.csv';										// The filename will be something like 2020-12-31-unbilledData.csv. This uses another function to get the date in a more readable format.
 		// Going through all the data recieved at this stage, populate the contents variable, keeping in mind this will be a csv format.
 		let dataArray = [];
 		let dataLine;
